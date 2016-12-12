@@ -34,7 +34,7 @@ steps:
   tophat:
     run: tophat.cwl
     in:
-      p: { default: 2 }
+      p: { default: 15 }
       r: { default: 0 }
       bowtie1: { default: true }
       no-novel-junc: { default: true }
