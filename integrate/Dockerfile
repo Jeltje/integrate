@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /opt
 
-#Install INTEGRATE
-ADD http://downloads.sourceforge.net/project/integrate-fusion/Integrate.0.2.6.tar.gz .
+#Install INTEGRATE via ugly mirror link (direct link to sourceforge doesn't work; neither does the ADD command)
+RUN	wget -O Integrate.0.2.6.tar.gz "http://downloads.sourceforge.net/project/integrate-fusion/INTEGRATE.0.2.6.tar.gz?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fintegrate-fusion%2Ffiles%2F&ts=1481578141&use_mirror=superb-sea2"
 RUN	tar zxvf Integrate.0.2.6.tar.gz && \
 	cd INTEGRATE_0_2_6 && \
 	mkdir build && \
