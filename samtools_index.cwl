@@ -3,13 +3,13 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [samtools, index]
+baseCommand: [index]
 
 doc: "samtools index"
 
 hints:
   DockerRequirement:
-    dockerPull: quay.io/ucsc_cgl/samtools
+    dockerPull: quay.io/jeltje/samtools
 
 requirements:
   - class: InlineJavascriptRequirement
