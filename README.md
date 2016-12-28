@@ -1,4 +1,4 @@
-## INTEGRATE input data
+## INTEGRATE
 
 INTEGRATE is a gene fusion caller that takes as input WGS and RNASeq fastq files. See the [INTEGRATE wiki](https://sourceforge.net/p/integrate-fusion/wiki/Home/) for more details.
 
