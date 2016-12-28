@@ -40,3 +40,22 @@ To download files from Synapse:
     * `syn.login('foo@bar.com', 'password')`
     * `syn.get('syn7899823', downloadLocation='.')`
 
+
+### INTEGRATE performance
+
+Using the workflow, we tested INTEGRATE on the SMC-RNA Dream Challenge simulated dataset sim31-sim36. In the table below, `Truth` is the number of simulated fusions, `Found` is the number of the simulated fusions found by INTEGRATE, and `Predicted` is the total number of fusions predicted by INTEGRATE. Even without calculating sensitivity and specificity, it is pretty clear that INTEGRATE does not work well with the used settings. This is most likely due to the absence of simulated WGS data.
+
+| Sample  | Truth  | Found  | Predicted  |  
+|---|---|---|---|
+|sim31  | 22  | 1  | 6  |
+|sim32   | 8  |  0 |  0 |
+|sim33   | 34  | 3  | 9  |
+|sim34   | 13  | 3  | 13  |
+|sim36   | 6  | 0  |  4 |
+
+We also tested on spiked in fusion data published by [Tembe et al.](http://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-15-824). Fastq files were downloaded from ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/SRA168/SRA168446/SRX587794 
+
+There are two fastq pairs that contain the same spiked in fusions, but at different concentrations. 
+INTEGRATE found four fusions in the higher spike in concentration files and three in the lower concentration. Only two of these were found in both file pairs.
+
+
